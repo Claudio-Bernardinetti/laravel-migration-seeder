@@ -9,10 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('trains', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('company');
+            $table->string('departure_station');
+            $table->string('arrival_station');
+            $table->time('departure_time');
+            $table->time('arrival_time');
+            $table->string('train_code');
+            $table->integer('number_of_carriages');
+            $table->boolean('on_time');
+            $table->boolean('cancelled');
             $table->timestamps();
         });
     }
