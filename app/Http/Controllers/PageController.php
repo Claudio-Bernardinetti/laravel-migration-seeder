@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Train;
 
-class TrainController extends Controller
+class PageController extends Controller
 {
     public function index()
     {
@@ -16,8 +16,8 @@ class TrainController extends Controller
         $date = Train::whereDate('departure_time', '=', $today)->get();
         
         $trains = Train::all();
-        dd($trains);
-
+        
         return view('welcome', compact('trains'));
+        dd($trains);
     }
 }

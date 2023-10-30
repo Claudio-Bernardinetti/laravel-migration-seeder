@@ -1,1 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+
+table {
+    display: flex;
+    justify-content: center;
+    
+    border-collapse: collapse;
+    padding-top: 2rem;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
